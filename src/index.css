@@ -2,47 +2,140 @@
 
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
   color: black;
   padding: 0;
   margin: 0;
 }
 
-.nav-container {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
+}
+
+.nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.nav-logo {
-  margin-left: 20px;
-}
-
-.nav-logo img {
-  vertical-align: top;
-}
-
-.nav-links {
-  display: flex;
   gap: 2rem;
+  padding: 1rem 1rem;
 }
 
-.nav-container ul {
+.nav-bar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 1rem;
 }
 
 nav a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease-in-out;
 }
 
-.svg-container img {
-  display: inline-block;
-  margin-right: 1.5rem;
+nav a:hover {
+  color: orange;
+}
+nav a:active {
+  color: purple;
+}
+
+.nav-logo {
+  width: 100%;
+  max-width: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-logo {
+    width: 3rem;
+    min-width: 3rem;
+  }
+}
+
+.nav-logo img {
+  width: 100%;
+}
+
+.svg-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .heart,
+  .cart,
+  .nav-bar ul {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.svg-container svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #ff6b6b;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.heart:hover {
+  fill: blue;
 }
 
 .nav_links li a {
-  font-family: "Nunito Sans", sans-serif;
+}
+
+.drawer {
+  background-color: #ccc;
+  width: fit-content;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+
+  display: flex;
+  gap: 1rem;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.drawer svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #ff6b6b;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
 }
