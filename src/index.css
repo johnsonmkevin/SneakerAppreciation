@@ -92,7 +92,7 @@ nav a:active {
 .svg-container svg {
   width: 1rem;
   height: 1rem;
-  fill: #ff6b6b;
+  fill: black;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
