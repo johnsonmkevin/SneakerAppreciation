@@ -18,8 +18,8 @@ a {
 }
 
 p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
-    Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .nav-bar {
@@ -111,6 +111,7 @@ nav a:active {
   background-color: #ccc;
   width: fit-content;
   height: 100vh;
+  z-index: 1;
 
   position: fixed;
   top: 0;

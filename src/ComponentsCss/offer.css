@@ -1,0 +1,13 @@
+.offer {
+  height: 100vh;
+}
+
+.header-title {
+  margin: 5rem 0rem;
+  text-align: center;
+}
+
+.shoeItemName {
+  display: flex;
+  justify-content: space-evenly;
+}
