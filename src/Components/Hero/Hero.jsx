@@ -22,8 +22,8 @@ export default function Hero() {
 
   const handleResize = () => {
     const scaleFactor = Math.min(
-      window.innerWidth / 999, // Adjust as needed
-      window.innerHeight / 999 // Adjust as needed
+      window.innerWidth / window.innerHeight, // Adjust as needed
+      window.innerHeight / window.innerWidth // Adjust as needed
     );
     setScale(scaleFactor);
   };
