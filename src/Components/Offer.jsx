@@ -20,9 +20,6 @@ function Offer() {
         <div>
           <h2>Sabrina Ionescu</h2>
         </div>
-        <div>
-          <h2>Sports Shoe</h2>
-        </div>
       </div>
       <div></div>
       <div></div>

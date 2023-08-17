@@ -1,58 +1,35 @@
-import React from "react";
-import { Canvas } from "react-three-fiber";
-import Box from "./Box";
-import * as THREE from "three";
-import { OrbitControls } from "@react-three/drei";
-import { useControls } from "leva";
-import { useMemo } from "react";
+import { OrbitControls, Sphere, stats } from "@react-three/drei";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Environment } from "@react-three/drei";
+import { useRef, useEffect } from "react";
 
-function Hero() {
-  const box = useMemo(
-    () => [
-      new THREE.BoxGeometry(),
-      new THREE.SphereGeometry(0.785398),
-      new THREE.DodecahedronGeometry(0.785398),
-    ],
-    []
-  );
-  const options = useMemo(() => {
-    return {
-      x: { value: 0, min: 0, max: Math.PI * 2, step: 0.01 },
-      y: { value: 0, min: 0, max: Math.PI * 2, step: 0.01 },
-      z: { value: 0, min: 0, max: Math.PI * 2, step: 0.01 },
-      visible: true,
-      color: { value: "pink" },
-      date: Date.now(),
-    };
-  }, []);
+export default function Hero() {
+  const gltf = useLoader(GLTFLoader, "./sneaker.glb");
 
-  const pA = useControls("Box A", options);
-  const pB = useControls("Box B", options);
+  const ref = useRef();
+
+  useEffect(() => {
+    console.log(ref.current);
+  });
 
   return (
     <Canvas
-      camera={{ position: [1, 2, 3] }}
-      style={{ backgroundColor: "black", width: "100%", height: "100vh" }}
+      camera={{ position: [0.6, 1.1, 0], fov: 20 }}
+      shadows
+      style={{ height: "40vh" }}
     >
-      <Box
-        position={[-1, 1, 0]}
-        rotation={[pA.x, pA.y, pA.z]}
-        visible={pA.visible}
-        color={pA.color}
-        box={box}
+      <directionalLight position={[12, 0.2, 6]} intensity={1} castShadowS>
+        <Sphere args={[0.025]}></Sphere>
+      </directionalLight>
+      <primitive
+        object={gltf.scene}
+        position={[0, 0.94, 0]}
+        children-0-castShadow
+        ref={ref}
       />
-      <Box
-        position={[1, 1, 0]}
-        rotation={[pB.x, pB.y, pB.z]}
-        visible={pB.visible}
-        color={pB.color}
-        box={box}
-      />
-      <OrbitControls />
-      <axesHelper args={[5]} />
-      <gridHelper />
+      <Environment files="./images/sky.hdr" background />
+      <OrbitControls target={[0, 1, 0]} />
     </Canvas>
   );
 }
-
-export default Hero;
