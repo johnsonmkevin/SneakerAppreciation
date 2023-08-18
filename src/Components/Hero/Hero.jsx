@@ -40,17 +40,17 @@ export default function Hero() {
         className="canvas"
         camera={{ position: [0.6, 1.1, 0], fov: 40 }}
         shadows
-        style={{ height: "50vh", width: "100%" }}
+        style={{ height: "100vh", width: "100%" }}
       >
         <directionalLight position={[12, 0.2, 6]} intensity={1} castShadow />
-        <Environment files="./images/sky.hdr" background />
+        <Environment files="./images/sky.hdr" background blur={1} />
         <OrbitControls target={[0, 1, 0]} enableZoom={false} enablePan={false} />
         <primitive
           object={gltf.scene}
           position={[0, 0.94, 0]}
           ref={ref}
           rotation-y={rotation}
-          scale={[1, 1, 1]} // Apply scale to all axes
+          scale={[1.5, 1.5, 1.5]} // Apply scale to all axes
         />
       </Canvas>
       <HeroTitle />
