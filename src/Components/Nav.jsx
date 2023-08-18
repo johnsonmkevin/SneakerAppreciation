@@ -1,4 +1,3 @@
-import Nike from "../images/Nike.svg";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { BsFillSuitHeartFill } from "react-icons/bs";
@@ -12,7 +11,7 @@ function Nav() {
     <>
       <header className="nav-bar">
         <div className="nav-logo">
-          <img src={Nike} className="NikeLogo" alt="NikeLogo" />
+          <img src="" className="NikeLogo" alt="NikeLogo" />
         </div>
         <nav className="nav_links">
           <ul>
