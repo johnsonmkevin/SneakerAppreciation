@@ -5,8 +5,10 @@ import Offer from "./Components/Offer";
 function App() {
   return (
     <>
-      <Hero />
-      <Offer />
+      <div className="TitleHeader">
+        <Hero />
+        <Offer />
+      </div>
     </>
   );
 }
