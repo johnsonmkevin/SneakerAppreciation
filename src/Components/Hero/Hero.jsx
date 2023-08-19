@@ -3,8 +3,8 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Environment } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
-
 import HeroTitle from "./HeroTitle";
+
 export default function Hero() {
   const gltf = useLoader(GLTFLoader, "./sneaker.glb");
   const ref = useRef();
