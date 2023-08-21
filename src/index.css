@@ -18,8 +18,8 @@ a {
 }
 
 p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
 }
 
 .nav-bar {
@@ -28,6 +28,7 @@ p {
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
+  position: relative;
 }
 
 .nav-bar ul {
@@ -111,7 +112,7 @@ nav a:active {
   background-color: #ccc;
   width: fit-content;
   height: 100vh;
-  z-index: 1;
+  z-index: 10;
 
   position: fixed;
   top: 0;
@@ -142,4 +143,22 @@ nav a:active {
   height: 100%;
   width: 100%;
   gap: 1rem;
+}
+
+.heroTitle {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 55%;
+  z-index: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.heroTitle img {
 }

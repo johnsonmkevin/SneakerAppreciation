@@ -3,6 +3,7 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Environment } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
+import HeroTitle from "./HeroTitle";
 
 export default function Hero() {
   const gltf = useLoader(GLTFLoader, "./sneaker.glb");
@@ -34,21 +35,25 @@ export default function Hero() {
   }, []);
 
   return (
-    <Canvas
-      camera={{ position: [0.6, 1.1, 0], fov: 40 }}
-      shadows
-      style={{ height: "100vh", width: "100%" }}
-    >
-      <directionalLight position={[12, 0.2, 6]} intensity={1} castShadow />
-      <Environment files="./images/sky.hdr" background />
-      <OrbitControls target={[0, 1, 0]} />
-      <primitive
-        object={gltf.scene}
-        position={[0, 0.94, 0]}
-        ref={ref}
-        rotation-y={rotation}
-        scale={[scale, scale, scale]} // Apply scale to all axes
-      />
-    </Canvas>
+    <div className="canvasContainer">
+      <Canvas
+        className="canvas"
+        camera={{ position: [0.6, 1.1, 0], fov: 40 }}
+        shadows
+        style={{ height: "100vh", width: "100%" }}
+      >
+        <directionalLight position={[12, 0.2, 6]} intensity={1} castShadow />
+        <Environment files="./images/sky.hdr" background blur={1} />
+        <OrbitControls target={[0, 1, 0]} enableZoom={false} enablePan={false} />
+        <primitive
+          object={gltf.scene}
+          position={[0, 0.94, 0]}
+          ref={ref}
+          rotation-y={rotation}
+          scale={[1.5, 1.5, 1.5]} // Apply scale to all axes
+        />
+      </Canvas>
+      <HeroTitle />
+    </div>
   );
 }
