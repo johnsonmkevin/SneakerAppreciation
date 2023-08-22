@@ -18,8 +18,8 @@ a {
 }
 
 p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
-    Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .nav-bar {
@@ -158,7 +158,4 @@ nav a:active {
 .footer {
   position: fixed;
   bottom: 0;
-}
-
-.heroTitle img {
 }
