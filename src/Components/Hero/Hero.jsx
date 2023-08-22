@@ -14,7 +14,7 @@ export default function Hero() {
         className="canvas"
         camera={{ position: [0.6, 1.1, 0], fov: 40 }}
         shadows
-        style={{ height: "100vh", width: "100%" }}
+        style={{ height: "80vh", width: "100%" }}
       >
         <directionalLight position={[12, 0.2, 6]} intensity={1} castShadow />
         <Environment files="./images/sky.hdr" background blur={1} />

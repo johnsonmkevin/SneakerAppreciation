@@ -104,9 +104,6 @@ nav a:active {
   fill: red;
 }
 
-.nav_links li a {
-}
-
 .drawer {
   background-color: #ccc;
   width: fit-content;
@@ -144,17 +141,47 @@ nav a:active {
   gap: 1rem;
 }
 
-.heroTitle {
-  position: absolute;
-  display: flex;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 55%;
-  z-index: 0;
+.canvas {
+  margin-bottom: 2rem;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
+.card {
+  display: inline-block;
+  background-color: white; /* Button background color */
+  border: none;
+  padding: 10px 20px; /* Adjust padding for your desired size */
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.sneaker-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sneakerImage img {
+  height: 50px;
+  vertical-align: middle;
+  /*   margin-right: 10px; */
+}
+
+.card-container {
+  display: inline-block;
+  width: 300px;
+  background-color: rgba(126, 120, 120, 0); /* Button background color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+
+  /* transition: background-color 0.3s, transform 0.2s; */ /* Smooth transitions */
+}
+
+.card-container:hover {
+  background-color: yellow;
 }

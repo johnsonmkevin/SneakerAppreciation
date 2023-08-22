@@ -4,7 +4,6 @@ import { useState } from "react";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { FaTimes } from "react-icons/fa";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +16,16 @@ function Nav() {
         <nav className="nav_links">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <a href="/">Kobe</a>
             </li>
             <li>
-              <Link to="/jordan">Jordan</Link>
+              <a href="/">Kobe</a>
             </li>
             <li>
-              <Link to="/kobe">Kobe</Link>
+              <a href="/">Kobe</a>
             </li>
             <li>
-              <Link to="/sabrina">Sabrina</Link>
+              <a href="/">Kobe</a>
             </li>
           </ul>
         </nav>
@@ -43,22 +42,22 @@ function Nav() {
           <nav className="nav_links">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
               </li>
               <li>
-                <Link to="/jordan">Jordan</Link>
+                <a href="/">Jordan</a>
               </li>
               <li>
-                <Link to="/kobe">Kobe</Link>
+                <a href="/">Kobe</a>
               </li>
               <li>
-                <Link to="/sabrina">Sabrina</Link>
+                <a href="/">Kobe</a>
               </li>
             </ul>
           </nav>
           <FaTimes onClick={() => setIsOpen(false)} />
         </div>
-      )}{" "}
+      )}
     </>
   );
 }
