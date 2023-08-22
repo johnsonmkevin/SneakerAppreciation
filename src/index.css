@@ -161,6 +161,7 @@ nav a:active {
 .sneaker-wrapper {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 
 .sneakerImage img {
@@ -170,7 +171,8 @@ nav a:active {
 }
 
 .card-container {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 300px;
   background-color: rgba(126, 120, 120, 0); /* Button background color */
   border: none;

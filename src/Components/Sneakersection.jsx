@@ -12,6 +12,7 @@ function Sneakersection() {
                 <img src={sneakers.image} key={sneakers.id} />
               </div>
             </div>
+            <p>{sneakers.title}</p>
           </div>
         );
       })}
