@@ -3,36 +3,10 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Environment } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
-import HeroTitle from "./HeroTitle";
 
 export default function Hero() {
   const gltf = useLoader(GLTFLoader, "./sneaker.glb");
   const ref = useRef();
-  const [rotation, setRotation] = useState(false);
-  const [scale, setScale] = useState(1); // Initial scale factor
-
-  const animate = () => {
-    setRotation((rotation) => rotation + 0.004);
-    requestAnimationFrame(animate);
-  };
-
-  useEffect(() => {
-    const animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
-  }, []);
-
-  const handleResize = () => {
-    const scaleFactor = Math.min(
-      window.innerWidth / window.innerHeight, // Adjust as needed
-      window.innerHeight / window.innerWidth // Adjust as needed
-    );
-    setScale(scaleFactor);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className="canvasContainer">
@@ -44,16 +18,9 @@ export default function Hero() {
       >
         <directionalLight position={[12, 0.2, 6]} intensity={1} castShadow />
         <Environment files="./images/sky.hdr" background blur={1} />
-        <OrbitControls target={[0, 1, 0]} enableZoom={false} enablePan={false} />
-        <primitive
-          object={gltf.scene}
-          position={[0, 0.94, 0]}
-          ref={ref}
-          rotation-y={rotation}
-          scale={[1.5, 1.5, 1.5]} // Apply scale to all axes
-        />
+        <OrbitControls target={[0, 1, 0]} enableZoom={false} autoRotate />
+        <primitive object={gltf.scene} position={[0, 0.94, 0]} ref={ref} />
       </Canvas>
-      <HeroTitle />
     </div>
   );
 }
