@@ -11,7 +11,11 @@ function Nav() {
     <>
       <header className="nav-bar">
         <div className="nav-logo">
-          <img src="" className="NikeLogo" alt="NikeLogo" />
+          <img
+            src="./images/nikeLogo.jpg"
+            className="NikeLogo"
+            alt="NikeLogo"
+          />
         </div>
         <nav className="nav_links">
           <ul>
