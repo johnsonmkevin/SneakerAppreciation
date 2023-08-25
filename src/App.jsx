@@ -1,14 +1,14 @@
 import "./index.css";
 import Hero from "./Components/Hero";
 import Sneakersection from "./Components/Sneakersection";
-import Support from "./Components/Support";
+import Modelslideshow from "./Components/Modelslideshow";
 
 function App() {
   return (
     <>
       <Sneakersection />
       <Hero />
-      <Support />
+      <Modelslideshow />
     </>
   );
 }
