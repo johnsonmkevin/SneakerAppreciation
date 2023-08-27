@@ -182,14 +182,14 @@ nav a:active {
 .card-container {
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 210px;
   background-color: rgba(126, 120, 120, 0); /* Button background color */
   border: none;
   padding: 10px 20px;
   border-radius: 50px; /* Rounded corners */
   cursor: pointer;
   box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-
+  text-decoration: none;
   /* transition: background-color 0.3s, transform 0.2s; */ /* Smooth transitions */
 }
 
@@ -226,10 +226,4 @@ video {
 
 .customSwiper {
   --swiper-navigation-size: 20px;
-}
-
-.swiper-initialized {
-}
-
-.swiper-horinzontal {
 }
