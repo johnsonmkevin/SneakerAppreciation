@@ -33,16 +33,13 @@ export default function Modelslideshow() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper customSwiper"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
           console.log(swiper);
         }}
         onSlideChange={handleSlideChange}
       >
-        <SwiperSlide>
-          <img src={images[0]} />
-        </SwiperSlide>
         <SwiperSlide>
           <img src={images[1]} />
         </SwiperSlide>
@@ -54,9 +51,6 @@ export default function Modelslideshow() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={images[4]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={images[5]} />
         </SwiperSlide>
       </Swiper>
     </>

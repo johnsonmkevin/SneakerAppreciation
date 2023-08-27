@@ -7,26 +7,31 @@ function Sneakersection() {
   }
 
   return (
-    <section className="sneaker-wrapper">
-      {Display.map((sneakers) => {
-        return (
-          <button
-            className="card-container"
-            onClick={() => btnClick(sneakers.id)}
-            key={sneakers.id}
-          >
-            <div className="card">
-              <div className="sneakerImage">
-                <img src={sneakers.image} />
+    <>
+      <header className="feature-Title">
+        <h1>Featured</h1>
+      </header>
+      <section className="sneaker-wrapper">
+        {Display.map((sneakers) => {
+          return (
+            <button
+              className="card-container"
+              onClick={() => btnClick(sneakers.id)}
+              key={sneakers.id}
+            >
+              <div className="card">
+                <div className="sneakerImage">
+                  <img src={sneakers.image} />
+                </div>
               </div>
-            </div>
-            <div className="sneakerTitle">
-              <p>{sneakers.title}</p>
-            </div>
-          </button>
-        );
-      })}
-    </section>
+              <div className="sneakerTitle">
+                <p>{sneakers.title}</p>
+              </div>
+            </button>
+          );
+        })}
+      </section>
+    </>
   );
 }
 
