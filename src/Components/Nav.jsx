@@ -20,16 +20,16 @@ function Nav() {
         <nav className="nav_links">
           <ul>
             <li>
-              <a href="/">Kobe</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">Kobe</a>
+              <a href="/">Men</a>
             </li>
             <li>
-              <a href="/">Kobe</a>
+              <a href="/">Women</a>
             </li>
             <li>
-              <a href="/">Kobe</a>
+              <a href="/">Kids</a>
             </li>
           </ul>
         </nav>
