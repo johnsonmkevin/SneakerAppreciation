@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,16 +21,16 @@ function Nav() {
         <nav className="nav_links">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/">Men</a>
+              <Link to="/men">Men</Link>
             </li>
             <li>
-              <a href="/">Women</a>
+              <Link to="/women">Women</Link>
             </li>
             <li>
-              <a href="/">Kids</a>
+              <Link to="/kids">Kids</Link>
             </li>
           </ul>
         </nav>
@@ -46,16 +47,16 @@ function Nav() {
           <nav className="nav_links">
             <ul>
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/">Jordan</a>
+                <Link to="/men">Men</Link>
               </li>
               <li>
-                <a href="/">Kobe</a>
+                <Link to="/women">Women</Link>
               </li>
               <li>
-                <a href="/">Kobe</a>
+                <Link to="/kids">Kids</Link>
               </li>
             </ul>
           </nav>
