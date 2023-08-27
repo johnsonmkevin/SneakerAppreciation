@@ -12,7 +12,8 @@ function Sneakersection() {
         {Display.map((sneakers) => {
           return (
             <Link
-              to={`sneakers/${sneakers.title}`}
+              to={sneakers.path}
+              element={sneakers.component}
               className="card-container"
               key={sneakers.id}
             >

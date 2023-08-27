@@ -7,7 +7,7 @@ export default function Hero() {
     <>
       <Sneakersection />
       <div className="videoContainer">
-        <video src={video} autoPlay loop muted />
+        <video src={video} muted />
       </div>
       <Modelslideshow />
     </>
