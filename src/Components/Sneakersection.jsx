@@ -1,5 +1,6 @@
 import React from "react";
-import Display from "./display.json";
+import Feature from "./feature.json";
+import { Link } from "react-router-dom";
 
 function Sneakersection() {
   function btnClick(sneakerId) {
@@ -12,12 +13,13 @@ function Sneakersection() {
         <h1>Featured</h1>
       </header>
       <section className="sneaker-wrapper">
-        {Display.map((sneakers) => {
+        {Feature.map((sneakers) => {
           return (
-            <button
+            <Link
               className="card-container"
               onClick={() => btnClick(sneakers.id)}
               key={sneakers.id}
+              to={sneakers.path}
             >
               <div className="card">
                 <div className="sneakerImage">
@@ -27,7 +29,7 @@ function Sneakersection() {
               <div className="sneakerTitle">
                 <p>{sneakers.title}</p>
               </div>
-            </button>
+            </Link>
           );
         })}
       </section>
