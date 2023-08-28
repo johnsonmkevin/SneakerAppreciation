@@ -1,9 +1,11 @@
 import React from "react";
+import LebronSneakers from "../data/lebronsneaker.json";
+import Sneakergrid from "./Sneakergrid";
 
 function Lebron() {
   return (
     <>
-      <div>Lebron</div>;
+      <Sneakergrid sneakers={LebronSneakers} />
     </>
   );
 }

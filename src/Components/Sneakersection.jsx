@@ -1,5 +1,5 @@
 import React from "react";
-import Feature from "./feature.json";
+import Feature from "../data/feature.json";
 import { Link } from "react-router-dom";
 
 function Sneakersection() {

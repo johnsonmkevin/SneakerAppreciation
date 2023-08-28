@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Durant 'Black Version'",
+    "image": "../images/durantPage/kdBlackVersion.webp",
+    "price": "285",
+    "component": "Durant",
+    "path": "/durant"
+  },
+
+  {
+    "id": 2,
+    "title": "Durant 'Home'",
+    "image": "../images/durantPage/kdHome.webp",
+    "price": "210",
+    "component": "Durant",
+    "path": "/Durant"
+  },
+  {
+    "id": 3,
+    "title": "Durant 15 'Refuge'",
+    "image": "../images/durantPage/kdRefuge.webp",
+    "price": "230",
+    "component": "Durant",
+    "path": "/durant"
+  },
+  {
+    "id": 4,
+    "title": "Durant 'Domestic Edition'",
+    "image": "../images/durantPage/kdwhitepurple.webp",
+    "price": "190",
+    "component": "Durant",
+    "path": "/durant"
+  }
+]

@@ -1,5 +1,5 @@
 import React from "react";
-import Retro from "./retro.json";
+import Retro from "../data/retro.json";
 import Sneakergrid from "./Sneakergrid";
 
 function Jordan() {

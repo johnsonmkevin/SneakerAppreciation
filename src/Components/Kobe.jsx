@@ -1,5 +1,5 @@
 import React from "react";
-import Zoom from "./kobezoom.json";
+import Zoom from "../data/kobezoom.json";
 import Sneakergrid from "./Sneakergrid";
 
 function Kobe() {
