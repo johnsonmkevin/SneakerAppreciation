@@ -23,7 +23,7 @@ function Sneakersection() {
                 </div>
               </div>
               <div className="sneakerTitle">
-                <p>{sneakers.title}</p>
+                <p>{sneakers.name}</p>
               </div>
             </Link>
           );
