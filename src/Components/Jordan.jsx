@@ -1,10 +1,11 @@
 import React from "react";
 import Retro from "./retro.json";
+import Sneakergrid from "./Sneakergrid";
 
 function Jordan() {
   return (
     <>
-      <div className="jordan-Container">HI</div>
+      <Sneakergrid sneakers={Retro} />
     </>
   );
 }

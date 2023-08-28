@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Kobe 'Del Sol'",
+    "image": "./images/kobePage/kobe4.jpg",
+    "price": "200"
+  },
+
+  {
+    "id": 2,
+    "title": "Kobe 'Zoom 4'",
+    "image": "./images/kobePage/KobeZoom4.webp",
+    "price": "210"
+  },
+  {
+    "id": 3,
+    "title": "Kobe '5 Rings'",
+    "image": "images/kobePage/kobeZoom5fiveRings.webp",
+    "price": "190"
+  },
+  {
+    "id": 4,
+    "title": "Kobe'Patent Zoom 5'",
+    "image": "images/kobePage/kobeZoom5protro.webp",
+    "price": "190"
+  }
+]
