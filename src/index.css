@@ -229,3 +229,7 @@ video {
   --swiper-navigation-size: 20px;
 }
  */
+
+.jordan-Container {
+  height: 100vh;
+}

@@ -12,18 +12,24 @@
     "id": 2,
     "title": "Kobe",
     "image": "images/Kobe.jpg",
-    "price": "210"
+    "price": "210",
+    "component": "Kobe",
+    "path": "/kobe"
   },
   {
     "id": 3,
     "title": "Lebron",
     "image": "images/Lebron.jpg",
-    "price": "190"
+    "price": "190",
+    "component": "Lebron",
+    "path": "/lebron"
   },
   {
     "id": 4,
     "title": "Durant",
     "image": "images/durant.jpg",
-    "price": "190"
+    "price": "190",
+    "component": "Durant",
+    "path": "/durant"
   }
 ]

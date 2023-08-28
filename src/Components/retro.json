@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "title": "Jordan Brotherhood",
+    "title": "Jordan 'Brotherhood'",
     "image": "./images/jordanPage.goldAndYellowRetro.webp",
     "price": "200"
   },
 
   {
     "id": 2,
-    "title": "Kobe",
-    "image": "images/Kobe.jpg",
+    "title": "Jordan 'Fearless'",
+    "image": "./images/jordanPage.fearless.webp",
     "price": "210"
   },
   {
     "id": 3,
-    "title": "Lebron",
-    "image": "images/Lebron.jpg",
+    "title": "Jordan 'Smokey'",
+    "image": "images/jordanPage.greyAndWhiteRetro.webp",
     "price": "190"
   },
   {
     "id": 4,
-    "title": "Durant",
-    "image": "images/durant.jpg",
+    "title": "Jordan'Patent Bred'",
+    "image": "images/jordanPage.redAndBlackRetro.webp",
     "price": "190"
   }
 ]
