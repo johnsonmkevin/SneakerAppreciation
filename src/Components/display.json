@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Jordan",
-    "image": "./images/jordan1.jpeg",
-    "price": "200",
+    "name": "Jordan",
+    "image": "./images/jordan1.webp",
+    "price": "220",
     "path": "/jordan",
     "component": "Jordan"
   },
 
   {
     "id": 2,
-    "title": "Kobe",
+    "name": "Kobe",
     "image": "images/Kobe.jpg",
     "price": "210",
     "path": "/kobe",
@@ -18,7 +18,7 @@
   },
   {
     "id": 3,
-    "title": "Lebron",
+    "name": "Lebron",
     "image": "images/Lebron.jpg",
     "price": "190",
     "path": "/lebron",
@@ -26,8 +26,8 @@
   },
   {
     "id": 4,
-    "title": "Durant",
-    "image": "images/durant.jpg",
+    "name": "Durant",
+    "image": "images/durant.webp",
     "price": "190",
     "path": "/Durant",
     "component": "Durant"
