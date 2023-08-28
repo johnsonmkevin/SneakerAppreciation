@@ -3,7 +3,7 @@ import React from "react";
 function Sneakergrid({ sneakers }) {
   return (
     <>
-      <div className="jordan-Container">
+      <div className="sneaker-Container">
         {sneakers.map((sneakers) => (
           <div key={sneakers.id} className="sneaker.wrapper">
             <div className="sneakerTitle">
