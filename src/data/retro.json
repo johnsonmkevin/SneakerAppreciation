@@ -3,25 +3,29 @@
     "id": 1,
     "title": "Jordan 'Brotherhood'",
     "image": "./images/jordanPage/goldAndYellowRetro.webp",
-    "price": "200"
+    "price": "200",
+    "description": "Jordan Brotherhood"
   },
 
   {
     "id": 2,
     "title": "Jordan 'Fearless'",
     "image": "./images/jordanPage/fearless.webp",
-    "price": "210"
+    "price": "210",
+    "description": "Jordan Fearless"
   },
   {
     "id": 3,
     "title": "Jordan 'Smokey'",
     "image": "images/jordanPage/greyAndWhiteRetro.webp",
-    "price": "190"
+    "price": "190",
+    "description": "Jordan smokey sneaker"
   },
   {
     "id": 4,
     "title": "Jordan'Patent Bred'",
     "image": "images/jordanPage/redAndBlackRetro.webp",
-    "price": "190"
+    "price": "190",
+    "description": "Jordan patent bred"
   }
 ]

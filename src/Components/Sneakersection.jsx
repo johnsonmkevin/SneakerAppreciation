@@ -3,10 +3,6 @@ import Feature from "../data/feature.json";
 import { Link } from "react-router-dom";
 
 function Sneakersection() {
-  function btnClick(sneakerId) {
-    console.log(`You clicked sneaker ${sneakerId}`);
-  }
-
   return (
     <>
       <header className="feature-Title">
@@ -17,7 +13,6 @@ function Sneakersection() {
           return (
             <Link
               className="card-container"
-              onClick={() => btnClick(sneakers.id)}
               key={sneakers.id}
               to={sneakers.path}
             >
