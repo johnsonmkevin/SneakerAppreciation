@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Jordan",
-    "image": "./images/jordan1.jpeg",
+    "image": "../images/jordanPage/redAndBlackRetro.webp",
     "price": "200",
     "component": "Jordan",
     "path": "/jordan",
@@ -30,7 +30,7 @@
   {
     "id": 4,
     "title": "Durant",
-    "image": "images/durant.jpg",
+    "image": "../images/durantPage/kdHome.webp",
     "price": "190",
     "component": "Durant",
     "path": "/durant",

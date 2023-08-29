@@ -14,12 +14,10 @@ export default function Modelslideshow() {
   };
 
   const images = [
-    "images/womenWithBall.jpg",
-    "images/guysShootingBall.jpg",
-    "images/girlsWithBasketBall.jpg",
-    "images/girlWithAttitude2.jpg",
-    "images/girlWithAttitude.jpg",
-    "images/guyWithBall.jpg",
+    "../images/modelslideshow/guysShootingBall.jpg",
+    "../images/modelslideshow/girlsWithBasketBall.jpg",
+    "../images/modelslideshow/girlWithAttitude2.jpg",
+    "../images/modelslideshow/girlWithAttitude.jpg",
   ];
 
   return (
@@ -41,6 +39,9 @@ export default function Modelslideshow() {
         onSlideChange={handleSlideChange}
       >
         <SwiperSlide>
+          <img src={images[0]} />
+        </SwiperSlide>
+        <SwiperSlide>
           <img src={images[1]} />
         </SwiperSlide>
         <SwiperSlide>
@@ -48,9 +49,6 @@ export default function Modelslideshow() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={images[3]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={images[4]} />
         </SwiperSlide>
       </Swiper>
     </>
