@@ -1,6 +1,7 @@
 import React from "react";
 import Feature from "../data/feature.json";
 import { Link } from "react-router-dom";
+import "./Sneakersection.css";
 
 function Sneakersection() {
   return (

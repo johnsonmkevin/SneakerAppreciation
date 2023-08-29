@@ -5,6 +5,7 @@ import { BsFillSuitHeartFill } from "react-icons/bs";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "./Nav.css";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
