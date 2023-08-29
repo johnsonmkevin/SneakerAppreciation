@@ -6,7 +6,9 @@
     "price": "200",
     "description": "Jordan Brotherhood",
     "component": "Jordan",
-    "path": "/jordan"
+    "path": "/jordan",
+    "category": "sneakers",
+    "sizes": [44, 45, 46.6, 47]
   },
 
   {
@@ -16,7 +18,8 @@
     "price": "210",
     "description": "Jordan Fearless",
     "component": "Jordan",
-    "path": "/jordan"
+    "path": "/jordan",
+    "sizes": [44.5, 45, 46.6, 47]
   },
   {
     "id": 3,
@@ -25,7 +28,8 @@
     "price": "190",
     "description": "Jordan smokey sneaker",
     "component": "Jordan",
-    "path": "/jordan"
+    "path": "/jordan",
+    "sizes": [44.5, 45, 46.6, 47]
   },
   {
     "id": 4,
@@ -34,6 +38,7 @@
     "price": "190",
     "description": "Jordan patent bred",
     "component": "Jordan",
-    "path": "/jordan"
+    "path": "/jordan",
+    "sizes": [44.5, 45, 46.6, 47]
   }
 ]

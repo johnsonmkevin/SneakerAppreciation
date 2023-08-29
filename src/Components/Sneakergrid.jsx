@@ -1,6 +1,7 @@
 import React from "react";
 
 function Sneakergrid({ sneakers }) {
+  console.log(sneakers);
   return (
     <>
       <div className="sneaker-Container">
