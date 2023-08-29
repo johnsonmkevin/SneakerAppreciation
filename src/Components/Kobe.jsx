@@ -1,7 +1,13 @@
 import React from "react";
+import Zoom from "../data/kobezoom.json";
+import Sneakergrid from "./Sneakergrid";
 
 function Kobe() {
-  return <div>Kobe</div>;
+  return (
+    <>
+      <Sneakergrid sneakers={Zoom} />
+    </>
+  );
 }
 
 export default Kobe;

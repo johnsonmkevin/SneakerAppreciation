@@ -1,11 +1,10 @@
 import "./index.css";
 import Hero from "./Components/Hero";
+import { Route, Routes } from "react-router-dom";
 import Men from "./Components/Men";
 import Women from "./Components/Women";
 import Kids from "./Components/Kids";
-import { Route, Routes } from "react-router-dom";
-import React from "react";
-import Jordan from "./Components/Jordan";
+import Jordan from "./Components/Jordan.jsx";
 import Kobe from "./Components/Kobe";
 import Lebron from "./Components/Lebron";
 import Durant from "./Components/Durant";
@@ -19,8 +18,8 @@ function App() {
       <Route path="/kids" element={<Kids />} />
       <Route path="/jordan" element={<Jordan />} />
       <Route path="/kobe" element={<Kobe />} />
-      <Route path="/durant" element={<Durant />} />
       <Route path="/lebron" element={<Lebron />} />
+      <Route path="/durant" element={<Durant />} />
     </Routes>
   );
 }

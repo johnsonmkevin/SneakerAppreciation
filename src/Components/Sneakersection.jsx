@@ -1,5 +1,5 @@
 import React from "react";
-import Display from "./display.json";
+import Feature from "../data/feature.json";
 import { Link } from "react-router-dom";
 
 function Sneakersection() {
@@ -9,13 +9,12 @@ function Sneakersection() {
         <h1>Featured</h1>
       </header>
       <section className="sneaker-wrapper">
-        {Display.map((sneakers) => {
+        {Feature.map((sneakers) => {
           return (
             <Link
-              to={sneakers.path}
-              element={sneakers.component}
               className="card-container"
               key={sneakers.id}
+              to={sneakers.path}
             >
               <div className="card">
                 <div className="sneakerImage">

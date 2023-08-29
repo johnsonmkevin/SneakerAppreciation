@@ -56,7 +56,7 @@ function Nav() {
                 <Link to="/women">Women</Link>
               </li>
               <li>
-                <Link to="/kids">Kids</Link>
+                <Link href="/kids">Kids</Link>
               </li>
             </ul>
           </nav>

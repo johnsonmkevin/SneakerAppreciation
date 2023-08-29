@@ -148,6 +148,7 @@ nav a:active {
   padding: 10px 20px; /* Adjust padding for your desired size */
   border-radius: 50px; /* Rounded corners */
   cursor: pointer;
+  text-decoration: none;
 }
 
 .sneaker-wrapper {
@@ -224,6 +225,7 @@ video {
   object-position: center;
 }
 
-.customSwiper {
+/* .customSwiper {
   --swiper-navigation-size: 20px;
 }
+ */

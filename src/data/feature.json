@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "title": "Jordan",
+    "image": "./images/jordan1.jpeg",
+    "price": "200",
+    "component": "Jordan",
+    "path": "/jordan",
+    "description": "Jordan 1 sneaker"
+  },
+
+  {
+    "id": 2,
+    "title": "Kobe",
+    "image": "images/Kobe.jpg",
+    "price": "210",
+    "component": "Kobe",
+    "path": "/kobe",
+    "description": "Kobe sneaker"
+  },
+  {
+    "id": 3,
+    "title": "Lebron",
+    "image": "images/Lebron.jpg",
+    "price": "190",
+    "component": "Lebron",
+    "path": "/lebron",
+    "description": "Lebron sneaker"
+  },
+  {
+    "id": 4,
+    "title": "Durant",
+    "image": "images/durant.jpg",
+    "price": "190",
+    "component": "Durant",
+    "path": "/durant",
+    "description": "Durant sneaker"
+  }
+]
