@@ -8,6 +8,7 @@ import Jordan from "./Components/Jordan.jsx";
 import Kobe from "./Components/Kobe";
 import Lebron from "./Components/Lebron";
 import Durant from "./Components/Durant";
+import Favorites from "./Components/Favorites";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/kobe" element={<Kobe />} />
       <Route path="/lebron" element={<Lebron />} />
       <Route path="/durant" element={<Durant />} />
+      <Route path="/favorites" element={<Favorites />} />
     </Routes>
   );
 }

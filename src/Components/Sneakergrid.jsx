@@ -1,22 +1,39 @@
 import React from "react";
+import "../css/Sneakergrid.css";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 
 function Sneakergrid({ sneakers }) {
+  const favoriteItem = (sneaker) => {
+    console.log(sneaker);
+  };
+
   return (
-    <>
-      <div className="sneaker-Container">
-        {sneakers.map((sneakers) => (
-          <div key={sneakers.id} className="sneaker.wrapper">
-            <div className="sneakerTitle">
-              <p>{sneakers.title}</p>
-              <p>${sneakers.price}</p>
-            </div>
-            <div className="sneakerImg">
-              <img src={sneakers.image} alt={sneakers.title} />
+    <div className="sneakerSale-Container">
+      {sneakers.map((sneaker) => (
+        <div key={sneaker.id} className="sneakerSale-wrapper">
+          <div className="sneakerSaleImg-container">
+            <div className="sneakerSaleImg-wrapper">
+              <img src={sneaker.image} alt={sneaker.title} />
             </div>
           </div>
-        ))}
-      </div>
-    </>
+          <div className="sneakerSaleTitle">
+            <p>{sneaker.title}</p>
+            <p>${sneaker.price}</p>
+            <div className="btnContainer">
+              <button className="btnAdd">Add to Cart</button>
+            </div>
+            <div className="favoriteBtnContainer"></div>
+            <button
+              className="btnFavorite"
+              onClick={() => favoriteItem(sneaker)}
+            >
+              Favorite
+              <BsFillSuitHeartFill className="heart" />
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

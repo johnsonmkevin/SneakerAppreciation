@@ -6,7 +6,8 @@
     "price": "285",
     "component": "Durant",
     "path": "/durant",
-    "description": "Durant sneaker Black version"
+    "description": "Durant sneaker Black version",
+    "sizes": [44.5, 45.5, 46.6, 47]
   },
 
   {
@@ -16,7 +17,8 @@
     "price": "270",
     "component": "Durant",
     "path": "/Durant",
-    "description": "Durant sneaker Home version"
+    "description": "Durant sneaker Home version",
+    "sizes": [44.5, 45.5, 46.6, 47]
   },
   {
     "id": 3,
@@ -25,7 +27,8 @@
     "price": "280",
     "component": "Durant",
     "path": "/durant",
-    "description": "Durant Refuge version"
+    "description": "Durant Refuge version",
+    "sizes": [44.5, 45.5, 46.6, 47]
   },
   {
     "id": 4,
@@ -34,6 +37,7 @@
     "price": "190",
     "component": "Durant",
     "path": "/durant",
-    "description": "Durant Domestic version"
+    "description": "Durant Domestic version",
+    "sizes": [44.5, 45.5, 46.6, 47]
   }
 ]

@@ -1,10 +1,12 @@
 import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
-import { BsFillSuitHeartFill } from "react-icons/bs";
-import { PiShoppingCartThin } from "react-icons/pi";
+import { BiHeart } from "react-icons/bi";
+import { AiOutlineShopping } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "../css/Nav.css";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +37,15 @@ function Nav() {
           </ul>
         </nav>
         <div className="svg-container">
-          <BsFillSuitHeartFill className="heart" />
-          <PiShoppingCartThin className="cart" />
+          <Link to="/favorites">
+            <BiHeart className="heart" />
+          </Link>
+          <Link to="/signin">
+            <AiOutlineUser className="signin" />
+          </Link>
+          <Link to="/cart">
+            <AiOutlineShopping className="cart" />
+          </Link>
         </div>
         <div className="burger">
           <Hamburger toggled={isOpen} toggle={setIsOpen} size={25} />

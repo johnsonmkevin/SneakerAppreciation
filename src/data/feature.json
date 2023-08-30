@@ -3,37 +3,41 @@
     "id": 1,
     "title": "Jordan",
     "image": "../images/jordanPage/redAndBlackRetro.webp",
-    "price": "200",
+    "price": 200,
     "component": "Jordan",
     "path": "/jordan",
-    "description": "Jordan 1 sneaker"
+    "description": "Jordan 1 sneaker",
+    "sizes": [45, 46.5, 47, 48]
   },
 
   {
     "id": 2,
     "title": "Kobe",
     "image": "images/Kobe.jpg",
-    "price": "210",
+    "price": 210,
     "component": "Kobe",
     "path": "/kobe",
-    "description": "Kobe sneaker"
+    "description": "Kobe sneaker",
+    "sizes": [45, 46.5, 47.5, 48]
   },
   {
     "id": 3,
     "title": "Lebron",
     "image": "images/Lebron.jpg",
-    "price": "190",
+    "price": 190,
     "component": "Lebron",
     "path": "/lebron",
-    "description": "Lebron sneaker"
+    "description": "Lebron sneaker",
+    "sizes": [44.5, 45.5, 46.6, 47]
   },
   {
     "id": 4,
     "title": "Durant",
     "image": "../images/durantPage/kdHome.webp",
-    "price": "190",
+    "price": 190,
     "component": "Durant",
     "path": "/durant",
-    "description": "Durant sneaker"
+    "description": "Durant sneaker",
+    "sizes": [44.5, 45.5, 46.6, 47]
   }
 ]
