@@ -14,6 +14,11 @@ function Sneakergrid({ sneakers }) {
           <div className="sneakerSaleTitle">
             <p>{sneaker.title}</p>
             <p>${sneaker.price}</p>
+            <div className="btnContainer">
+              <button className="checkOutBtn">Add to Cart</button>
+            </div>
+            <div className="favoriteBtnContainer"></div>
+            <button className="favoriteBtn">Favorite</button>
           </div>
         </div>
       ))}
