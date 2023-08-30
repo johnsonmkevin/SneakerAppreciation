@@ -1,5 +1,6 @@
 import video from "../assets/Nike.mp4";
 import Modelslideshow from "./Modelslideshow";
+import "../css/Hero.css";
 
 export default function Hero() {
   return (

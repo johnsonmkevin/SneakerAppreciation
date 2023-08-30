@@ -1,7 +1,12 @@
 import React from "react";
-import "./Sneakergrid.css";
+import "../css/Sneakergrid.css";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 
 function Sneakergrid({ sneakers }) {
+  const favoriteItem = (sneaker) => {
+    console.log(sneaker);
+  };
+
   return (
     <div className="sneakerSale-Container">
       {sneakers.map((sneaker) => (
@@ -15,10 +20,16 @@ function Sneakergrid({ sneakers }) {
             <p>{sneaker.title}</p>
             <p>${sneaker.price}</p>
             <div className="btnContainer">
-              <button className="checkOutBtn">Add to Cart</button>
+              <button className="btnAdd">Add to Cart</button>
             </div>
             <div className="favoriteBtnContainer"></div>
-            <button className="favoriteBtn">Favorite</button>
+            <button
+              className="btnFavorite"
+              onClick={() => favoriteItem(sneaker)}
+            >
+              Favorite
+              <BsFillSuitHeartFill className="heart" />
+            </button>
           </div>
         </div>
       ))}
