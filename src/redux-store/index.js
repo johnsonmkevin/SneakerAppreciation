@@ -5,9 +5,10 @@ import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 
 // reducers
+import cart from "./cartReducer";
 
 // combine reducers
-const reducers = combineReducers({});
+const reducers = combineReducers({ cart });
 
 // config
 const config = {
