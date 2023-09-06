@@ -39,5 +39,154 @@
     "path": "/durant",
     "description": "Durant sneaker",
     "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 5,
+    "title": "Kobe 'Del Sol'",
+    "image": "./images/kobePage/kobe5.jpg",
+    "price": "270",
+    "description": "Kobe sneaker Del Sol",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+
+  {
+    "id": 6,
+    "title": "Kobe 'Zoom 4'",
+    "image": "./images/kobePage/KobeZoom4.webp",
+    "price": "260",
+    "description": "Kobe Zoom 4",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 7,
+    "title": "Kobe '5 Rings'",
+    "image": "images/kobePage/kobeZoom5fiveRings.webp",
+    "price": "250",
+    "description": "Kobe 5 rings sneaker",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 8,
+    "title": "Kobe'Patent Zoom 5'",
+    "image": "images/kobePage/kobeZoom5protro.webp",
+    "price": "290",
+    "description": "Kobe Zoom 5 sneaker",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 9,
+    "title": "Durant 'Black Version'",
+    "image": "../images/durantPage/kdBlackVersion.webp",
+    "price": "285",
+    "component": "Durant",
+    "path": "/durant",
+    "description": "Durant sneaker Black version",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+
+  {
+    "id": 10,
+    "title": "Durant 'Home'",
+    "image": "../images/durantPage/kdHome.webp",
+    "price": "270",
+    "component": "Durant",
+    "path": "/Durant",
+    "description": "Durant sneaker Home version",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 11,
+    "title": "Durant 15 'Refuge'",
+    "image": "../images/durantPage/kdRefuge.webp",
+    "price": "280",
+    "component": "Durant",
+    "path": "/durant",
+    "description": "Durant Refuge version",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 12,
+    "title": "Durant 'Domestic Edition'",
+    "image": "../images/durantPage/kdwhitepurple.webp",
+    "price": "190",
+    "component": "Durant",
+    "path": "/durant",
+    "description": "Durant Domestic version",
+    "sizes": [44.5, 45.5, 46.6, 47]
+  },
+  {
+    "id": 13,
+    "title": "Lebron '16'",
+    "image": "./images/lebronPage/lebron16.webp",
+    "price": "260",
+    "description": "Lebron 16 sneaker",
+    "sizes": [44.5, 45, 46.6, 47]
+  },
+
+  {
+    "id": 14,
+    "title": "Lebron '19 Tropical'",
+    "image": "./images/lebronPage/lebron19Tropical.webp",
+    "price": "260",
+    "description": "Lebron 19 sneaker",
+    "sizes": [44.5, 45, 46.6, 47]
+  },
+  {
+    "id": 15,
+    "title": "Lebron 'Valentine's Day'",
+    "image": "./images/lebronPage/lebron19ValentinesDay.webp",
+    "price": "260",
+    "description": "Lebron valetines day sneaker",
+    "sizes": [44, 45, 46.6, 47]
+  },
+  {
+    "id": 16,
+    "title": "Lebron '19 Witness'",
+    "image": "./images/lebronPage/lebronwitness6.webp",
+    "price": "260",
+    "description": "Lebron 16 witness sneaker",
+    "sizes": [44, 45.5, 46.6, 47]
+  },
+  {
+    "id": 17,
+    "title": "Jordan 'Brotherhood'",
+    "image": "./images/jordanPage/goldAndYellowRetro.webp",
+    "price": "200",
+    "description": "Jordan Brotherhood",
+    "component": "Jordan",
+    "path": "/jordan",
+    "category": "sneakers",
+    "sizes": [44, 45, 46.6, 47]
+  },
+
+  {
+    "id": 18,
+    "title": "Jordan 'Fearless'",
+    "image": "./images/jordanPage/fearless.webp",
+    "price": "210",
+    "description": "Jordan Fearless",
+    "component": "Jordan",
+    "path": "/jordan",
+    "sizes": [44.5, 45, 46.6, 47]
+  },
+  {
+    "id": 19,
+    "title": "Jordan 'Smokey'",
+    "image": "images/jordanPage/greyAndWhiteRetro.webp",
+    "price": "190",
+    "description": "Jordan smokey sneaker",
+    "component": "Jordan",
+    "path": "/jordan",
+    "sizes": [44.5, 45, 46.6, 47]
+  },
+  {
+    "id": 20,
+    "title": "Jordan'Patent Bred'",
+    "image": "images/jordanPage/redAndBlackRetro.webp",
+    "price": "190",
+    "description": "Jordan patent bred",
+    "component": "Jordan",
+    "path": "/jordan",
+    "sizes": [44.5, 45, 46.6, 47]
   }
 ]

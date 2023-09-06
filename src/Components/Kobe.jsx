@@ -1,11 +1,15 @@
 import React from "react";
-import Zoom from "../data/kobezoom.json";
+import Feature from "../data/feature.json";
 import Sneakergrid from "./Sneakergrid";
 
 function Kobe() {
+  const kobeSneakers = Feature.filter(
+    (sneakers) => sneakers.id >= 5 && sneakers.id <= 8
+  );
+
   return (
     <>
-      <Sneakergrid sneakers={Zoom} />
+      <Sneakergrid sneakers={kobeSneakers} />
     </>
   );
 }
