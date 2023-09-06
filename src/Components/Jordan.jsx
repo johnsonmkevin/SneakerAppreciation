@@ -1,11 +1,14 @@
 import React from "react";
-import Retro from "../data/retro.json";
+import Feature from "../data/feature.json";
 import Sneakergrid from "./Sneakergrid";
 
 function Jordan() {
+  const jordanSneakers = Feature.filter(
+    (sneakers) => sneakers.id >= 17 && sneakers.id <= 20
+  );
   return (
     <>
-      <Sneakergrid sneakers={Retro} />
+      <Sneakergrid sneakers={jordanSneakers} />
     </>
   );
 }

@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import "../css/Sneakersection.css";
 
 function Sneakersection() {
+  const sneakerDisplay = Feature.slice(0, 4);
   return (
     <>
       <header className="feature-Title">
         <h1>Featured</h1>
       </header>
       <section className="sneaker-wrapper">
-        {Feature.map((sneakers) => {
+        {sneakerDisplay.map((sneakers) => {
           return (
             <Link
               className="card-container"

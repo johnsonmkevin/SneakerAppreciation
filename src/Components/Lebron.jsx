@@ -1,11 +1,14 @@
 import React from "react";
-import LebronSneakers from "../data/lebronsneaker.json";
+import Feature from "../data/feature.json";
 import Sneakergrid from "./Sneakergrid";
 
 function Lebron() {
+  const lebronSneakers = Feature.filter(
+    (sneakers) => sneakers.id >= 13 && sneakers.id <= 16
+  );
   return (
     <>
-      <Sneakergrid sneakers={LebronSneakers} />
+      <Sneakergrid sneakers={lebronSneakers} />
     </>
   );
 }
