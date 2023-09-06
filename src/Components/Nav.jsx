@@ -7,9 +7,13 @@ import { AiOutlineUser } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../css/Nav.css";
+import { useSelector } from "react-redux";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const cart = useSelector((state) => state.cart);
+  console.log(cart.cartItems);
+
   return (
     <>
       <header className="nav-bar">
@@ -43,8 +47,9 @@ function Nav() {
           <Link to="/signin">
             <AiOutlineUser className="signin" />
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" className="cartContainer">
             <AiOutlineShopping className="cart" />
+            <span className="cartQty">{cart.cartItems.length}</span>
           </Link>
         </div>
         <div className="burger">
