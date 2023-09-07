@@ -1,14 +1,11 @@
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Set a z-index value */
-  object-fit: cover;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&family=Roboto:wght@700&display=swap");
+
+.home-header {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 72px;
 }
 
-.footer {
-  position: relative; /* Ensure it's relatively positioned */
-  z-index: 2; /* Set a higher z-index value */
+.home-titleContainer {
+  margin-bottom: 50px;
 }

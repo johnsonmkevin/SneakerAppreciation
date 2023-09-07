@@ -5,9 +5,12 @@ import "./video.css";
 function Video() {
   return (
     <>
-      <div className="video-container">
+      <header className="home-titleContainer">
+        <h1 className="home-header">Hoop Dreams</h1>
+      </header>
+      <section className="video-container">
         <video src={video} />
-      </div>
+      </section>
     </>
   );
 }
