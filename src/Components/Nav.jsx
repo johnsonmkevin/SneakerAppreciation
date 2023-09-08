@@ -27,10 +27,7 @@ export default function Nav() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/men">Men</Link>
-            </li>
-            <li>
-              <Link to="/women">Women</Link>
+              <Link to="/unisex">Unisex</Link>
             </li>
             <li>
               <Link to="/kids">Kids</Link>
@@ -63,10 +60,7 @@ export default function Nav() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/men">Men</Link>
-              </li>
-              <li>
-                <Link to="/women">Women</Link>
+                <Link to="/unisex">Unisex</Link>
               </li>
               <li>
                 <Link href="/kids">Kids</Link>
