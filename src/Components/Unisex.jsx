@@ -23,7 +23,7 @@ function Unisex() {
                   <span>{products.description}</span>
                   <span className="price">${products.price}</span>
                 </div>
-                <button>Add To Cart</button>
+                <button className="btn">Add To Cart</button>
               </div>
             ))}
           </div>
