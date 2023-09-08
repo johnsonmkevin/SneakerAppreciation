@@ -1,27 +1,36 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Layout from "./Components/Layout";
+import Layout from "./Layout";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
-import { persistStore } from "redux-persist";
-import store from "./redux-store";
 
-const persistor = persistStore(store);
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+
+import productsReducer, { productsFetch } from "./features/productSlice";
+import { productsApi } from "./features/productsApi";
+
+const store = configureStore({
+  reducer: {
+    products: productsReducer,
+    [productsApi.reducerPath]: productsApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(productsApi.middleware), // Remove the extra semicolon and specify the middleware correctly
+});
+
+store.dispatch(productsFetch());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate persistor={persistor} loading={null}>
-        <BrowserRouter>
-          <Layout>
-            <App />
-          </Layout>
-        </BrowserRouter>
-      </PersistGate>
+      <BrowserRouter>
+        <Layout>
+          <App />
+        </Layout>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

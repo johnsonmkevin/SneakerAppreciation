@@ -6,13 +6,10 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "../css/Nav.css";
-import { useSelector } from "react-redux";
+import "./nav.css";
 
-function Nav() {
+export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const cart = useSelector((state) => state.cart);
-  console.log(cart.cartItems);
 
   return (
     <>
@@ -30,10 +27,7 @@ function Nav() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/men">Men</Link>
-            </li>
-            <li>
-              <Link to="/women">Women</Link>
+              <Link to="/unisex">Unisex</Link>
             </li>
             <li>
               <Link to="/kids">Kids</Link>
@@ -49,7 +43,9 @@ function Nav() {
           </Link>
           <Link to="/cart" className="cartContainer">
             <AiOutlineShopping className="cart" />
-            <span className="cartQty">{cart.cartItems.length}</span>
+            <span className="cartQty">
+              <span>5</span>
+            </span>
           </Link>
         </div>
         <div className="burger">
@@ -64,10 +60,7 @@ function Nav() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/men">Men</Link>
-              </li>
-              <li>
-                <Link to="/women">Women</Link>
+                <Link to="/unisex">Unisex</Link>
               </li>
               <li>
                 <Link href="/kids">Kids</Link>
@@ -80,5 +73,3 @@ function Nav() {
     </>
   );
 }
-
-export default Nav;

@@ -1,28 +1,22 @@
-import "./index.css";
-import Hero from "./Components/Hero";
+import React from "react";
+import "./index";
 import { Route, Routes } from "react-router-dom";
-import Men from "./Components/Men";
-import Women from "./Components/Women";
+import Video from "./Components/Video";
+import Cart from "./Components/Cart";
+import NotFound from "./Components/NotFound";
+import Unisex from "./Components/Unisex";
 import Kids from "./Components/Kids";
-import Jordan from "./Components/Jordan.jsx";
-import Kobe from "./Components/Kobe";
-import Lebron from "./Components/Lebron";
-import Durant from "./Components/Durant";
-import Favorites from "./Components/Favorites";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Hero />} />
-      <Route path="/men" element={<Men />} />
-      <Route path="/women" element={<Women />} />
+      <Route path="/" element={<Video />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/unisex" element={<Unisex />} />
       <Route path="/kids" element={<Kids />} />
-      <Route path="/jordan" element={<Jordan />} />
-      <Route path="/kobe" element={<Kobe />} />
-      <Route path="/lebron" element={<Lebron />} />
-      <Route path="/durant" element={<Durant />} />
-      <Route path="/favorites" element={<Favorites />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
+
 export default App;
