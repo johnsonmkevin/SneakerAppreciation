@@ -2,15 +2,18 @@ import React from "react";
 import { useGetAllProductsQuery } from "../features/productsApi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
+import { useNavigate } from "react-router";
 
 function Unisex() {
   const { data, error, isLoading } = useGetAllProductsQuery();
 
   const unisexData = data?.slice(0, -2);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddtoCart = (product) => {
     dispatch(addToCart(product));
+    navigate("/cart");
   };
 
   return (
