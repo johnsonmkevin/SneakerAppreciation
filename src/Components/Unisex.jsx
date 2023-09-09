@@ -1,10 +1,17 @@
 import React from "react";
 import { useGetAllProductsQuery } from "../features/productsApi";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 
 function Unisex() {
   const { data, error, isLoading } = useGetAllProductsQuery();
 
   const unisexData = data?.slice(0, -2);
+  const dispatch = useDispatch();
+
+  const handleAddtoCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div className="sneaker-Container">
@@ -28,7 +35,12 @@ function Unisex() {
                     <span className="price">${product.price}</span>
                   </div>
                 </div>
-                <button className="btn">Add To Cart</button>
+                <button
+                  className="btn"
+                  onClick={() => handleAddtoCart(product)}
+                >
+                  Add To Cart
+                </button>
               </div>
             ))}
           </div>
