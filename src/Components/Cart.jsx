@@ -1,8 +1,8 @@
 import React from "react";
-import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
-
+import "./cart.css";
 function Cart() {
   const cart = useSelector((state) => state.cart);
 
@@ -10,7 +10,7 @@ function Cart() {
     <div className="cart-container">
       <h2>Shopping Cart</h2>
       {cart.cartItems.length === 0 ? (
-        <div className="div">
+        <div className="cart-empty">
           <p>No items in your cart</p>
           <div className="start-shopping">
             <Link to="/">
@@ -23,9 +23,9 @@ function Cart() {
         <div>
           <div className="titles">
             <h3 className="product-title">Product</h3>
-            <h3 className="product-price">Price</h3>
-            <h3 className="product-quantity">Quantity</h3>
-            <h3 className="product-Total">Total</h3>
+            <h3 className="price">Price</h3>
+            <h3 className="quantity">Quantity</h3>
+            <h3 className="total">Total</h3>
           </div>
           <div className="cart-items">
             {cart.cartItems?.map((cartItem) => (
@@ -43,9 +43,9 @@ function Cart() {
                   <button>-</button>
                   <div className="count">{cartItem.cartQuantity}</div>
                   <button>+</button>
-                  <div className="cart-product-total-price">
-                    ${cartItem.price * cartItem.cartQuantity}
-                  </div>
+                </div>
+                <div className="cart-product-total-price">
+                  ${cartItem.price * cartItem.cartQuantity}
                 </div>
               </div>
             ))}

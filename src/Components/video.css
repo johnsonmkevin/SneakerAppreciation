@@ -7,3 +7,17 @@
 .home-titleContainer {
   margin-bottom: 50px;
 }
+
+/* Make the video container full width of the viewport */
+.video-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the video to cover the container */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
