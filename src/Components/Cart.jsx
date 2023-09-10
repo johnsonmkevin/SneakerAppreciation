@@ -12,12 +12,6 @@ function Cart() {
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">
           <p>No items in your cart</p>
-          <div className="start-shopping">
-            <Link to="/">
-              <HiOutlineArrowSmLeft className="arrow" />
-              <span>Start Shopping</span>
-            </Link>
-          </div>
         </div>
       ) : (
         <div>
@@ -58,7 +52,7 @@ function Cart() {
                 <span className="amount">${cart.cartTotalAmount}</span>
                 <p>Free shipping</p>
                 <button className="">Checkout</button>
-                <div className="start-shopping">
+                <div className="continue-shopping">
                   <Link to="/">
                     <HiOutlineArrowSmLeft className="arrow" />
                     <span>Continue Shopping</span>
