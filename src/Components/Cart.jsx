@@ -4,17 +4,28 @@ import { Link } from "react-router-dom";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { useDispatch } from "react-redux";
 import "./cart.css";
-import { addToCart, clearCart, removeFromCart } from "../features/cartSlice";
+import {
+  addToCart,
+  clearCart,
+  removeFromCart,
+  getTotals,
+  decreaseCartQuantity,
+} from "../features/cartSlice";
+import { useEffect } from "react";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart, dispatch]);
+
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem));
   };
   const handleDecreasedCart = (cartItem) => {
-    dispatch(removeFromCart(cartItem));
+    dispatch(decreaseCartQuantity(cartItem));
   };
   const handleIncreasedCart = (cartItem) => {
     dispatch(addToCart(cartItem));

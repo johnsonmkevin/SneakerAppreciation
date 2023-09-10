@@ -119,6 +119,8 @@
   font-weight: 600;
 }
 
+.swiper-container {
+}
 @keyframes spinner-sm4bhi {
   100% {
     transform: rotate(1turn);
