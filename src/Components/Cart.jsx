@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { useDispatch } from "react-redux";
 import "./cart.css";
-import { addToCart, removeFromCart } from "../features/cartSlice";
+import { addToCart, clearCart, removeFromCart } from "../features/cartSlice";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
@@ -18,6 +18,10 @@ function Cart() {
   };
   const handleIncreasedCart = (cartItem) => {
     dispatch(addToCart(cartItem));
+  };
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
   };
 
   return (
@@ -65,7 +69,9 @@ function Cart() {
             ))}
           </div>
           <div className="cart-summary">
-            <button className="clear-cart">Clear Cart</button>
+            <button className="clear-cart" onClick={() => handleClearCart()}>
+              Clear Cart
+            </button>
             <div className="cart-checkout">
               <div className="subTotal">
                 <span>Subtotal</span>
