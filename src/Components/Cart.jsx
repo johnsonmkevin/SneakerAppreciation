@@ -2,9 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
+import { useDispatch } from "react-redux";
 import "./cart.css";
+import { removeFromCart } from "../features/cartSlice";
+
 function Cart() {
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const handleRemoveFromCart = (cartItem) => {
+    dispatch(removeFromCart(cartItem));
+  };
 
   return (
     <div className="cart-container">
@@ -12,12 +20,6 @@ function Cart() {
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">
           <p>No items in your cart</p>
-          <div className="start-shopping">
-            <Link to="/">
-              <HiOutlineArrowSmLeft className="arrow" />
-              <span>Start Shopping</span>
-            </Link>
-          </div>
         </div>
       ) : (
         <div>
@@ -35,7 +37,9 @@ function Cart() {
                   <div>
                     <h3>{cartItem.title}</h3>
                     <p>{cartItem.description}</p>
-                    <button>Remove</button>
+                    <button onClick={() => handleRemoveFromCart(cartItem)}>
+                      Remove
+                    </button>
                   </div>
                 </div>
                 <div className="cart product-price">${cartItem.price}</div>
@@ -58,7 +62,7 @@ function Cart() {
                 <span className="amount">${cart.cartTotalAmount}</span>
                 <p>Free shipping</p>
                 <button className="">Checkout</button>
-                <div className="start-shopping">
+                <div className="continue-shopping">
                   <Link to="/">
                     <HiOutlineArrowSmLeft className="arrow" />
                     <span>Continue Shopping</span>
