@@ -10,7 +10,7 @@ function Video() {
         <h1 className="header">Hoop Dream</h1>
       </header>
       <section className="video-container">
-        <video src={video} autoPlay muted loop />
+        <video src={video} /* autoPlay muted loop */ />
       </section>
       <ModelSlider />
     </>

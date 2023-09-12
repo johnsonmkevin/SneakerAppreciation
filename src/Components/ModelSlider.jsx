@@ -1,40 +1,40 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
 
-function ModelSlider() {
+export default function Modelslideshow() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef(null);
+  const handleSlideChange = (swiper) => {
+    setCurrentIndex(swiper.realIndex); // Using realIndex to account for loop
+  };
+
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={4}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>
-        <img src="../images/durant.webp" alt="Kevin Durant" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="../images/basketballplayer.webp"
-          alt="A player dunking the ball"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="../images/femalePlayer.webp"
-          alt="A girl sitting with basketball"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="../images/femalePlayer2.webp" alt="A girl with basketball" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="../images/kidsBasketball.jpg" alt="Kid with basketball" />
-      </SwiperSlide>
-      ...
-    </Swiper>
+    <>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={10}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper customSwiper"
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          console.log(swiper);
+        }}
+        onSlideChange={handleSlideChange}
+      >
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+      </Swiper>
+    </>
   );
 }
-
-export default ModelSlider;
