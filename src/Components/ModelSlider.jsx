@@ -30,10 +30,10 @@ export default function Modelslideshow() {
         }}
         onSlideChange={handleSlideChange}
       >
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>1</SwiperSlide>
+        <SwiperSlide>2</SwiperSlide>
+        <SwiperSlide>3</SwiperSlide>
+        <SwiperSlide>4</SwiperSlide>
       </Swiper>
     </>
   );
