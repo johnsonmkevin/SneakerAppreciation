@@ -7,6 +7,10 @@
   font-family: "Nunito", sans-serif;
 }
 
+main {
+  display: relative;
+}
+
 .spinner {
   width: 56px;
   height: 56px;
