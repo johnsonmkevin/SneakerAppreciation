@@ -3,6 +3,7 @@ import { useGetAllProductsQuery } from "../features/productsApi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 import { useNavigate } from "react-router-dom";
+import "./Products/Products.css";
 
 function Kids() {
   const { data, error, isLoading } = useGetAllProductsQuery();

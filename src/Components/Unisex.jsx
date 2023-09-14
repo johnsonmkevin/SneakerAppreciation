@@ -3,6 +3,7 @@ import { useGetAllProductsQuery } from "../features/productsApi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 import { useNavigate } from "react-router";
+import "./Products/Products.css";
 
 function Unisex() {
   const { data, error, isLoading } = useGetAllProductsQuery();

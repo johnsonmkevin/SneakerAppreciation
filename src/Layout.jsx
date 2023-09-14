@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "./Components/Nav";
-import Footer from "./Footer";
-import NotFound from "./Components/NotFound";
+import Footer from "./Components/Footer";
 
 function Layout({ children }) {
   return (
