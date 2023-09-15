@@ -33,6 +33,12 @@ nav a {
   font-size: 14px;
   font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+  .cartQty {
+    display: none;
+  }
+}
 nav a:hover {
   color: orange;
   transition: all 0.3s ease-in-out;

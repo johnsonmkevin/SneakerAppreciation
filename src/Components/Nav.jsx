@@ -1,9 +1,7 @@
 import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
-import { BiHeart } from "react-icons/bi";
 import { AiOutlineShopping } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./nav.css";
@@ -17,11 +15,13 @@ export default function Nav() {
     <>
       <header className="nav-bar">
         <div className="nav-logo">
-          <img
-            src="./images/nikeLogo.jpg"
-            className="NikeLogo"
-            alt="NikeLogo"
-          />
+          <Link to="/">
+            <img
+              src="./images/nikeLogo.jpg"
+              className="NikeLogo"
+              alt="NikeLogo"
+            />
+          </Link>
         </div>
         <nav className="nav_links">
           <ul>
@@ -37,12 +37,6 @@ export default function Nav() {
           </ul>
         </nav>
         <div className="svg-container">
-          <Link to="/favorites">
-            <BiHeart className="heart" />
-          </Link>
-          <Link to="/signin">
-            <AiOutlineUser className="signin" />
-          </Link>
           <Link to="/cart" className="cartContainer">
             <AiOutlineShopping className="cart" />
             <span className="cartQty">
