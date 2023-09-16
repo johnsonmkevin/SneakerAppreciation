@@ -11,6 +11,7 @@ import {
   getTotals,
   decreaseCartQuantity,
 } from "../features/cartSlice";
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 
 function Cart() {
@@ -36,70 +37,77 @@ function Cart() {
   };
 
   return (
-    <div className="cart-container">
-      <h2>Shopping Cart</h2>
-      {cart.cartItems.length === 0 ? (
-        <div className="cart-empty">
-          <p>No items in your cart</p>
-        </div>
-      ) : (
-        <div>
-          <div className="titles">
-            <h3 className="product-title">Product</h3>
-            <h3 className="price">Price</h3>
-            <h3 className="quantity">Quantity</h3>
-            <h3 className="total">Total</h3>
+    <div>
+      <Helmet>
+        <title>Checkout Cart</title>
+        <meta name="description" content="Sneakers in your cart" />
+        <link rel="canonical" href="/cart" />
+      </Helmet>
+      <div className="cart-container">
+        <h2>Shopping Cart</h2>
+        {cart.cartItems.length === 0 ? (
+          <div className="cart-empty">
+            <p>No items in your cart</p>
           </div>
-          <div className="cart-items">
-            {cart.cartItems?.map((cartItem) => (
-              <div className="cart-item" key={cartItem.id}>
-                <div className="cart-product">
-                  <img src={cartItem.image} alt={cartItem.title} />
-                  <div>
-                    <h3>{cartItem.title}</h3>
-                    <p>{cartItem.description}</p>
-                    <button onClick={() => handleRemoveFromCart(cartItem)}>
-                      Remove
+        ) : (
+          <div>
+            <div className="titles">
+              <h3 className="product-title">Product</h3>
+              <h3 className="price">Price</h3>
+              <h3 className="quantity">Quantity</h3>
+              <h3 className="total">Total</h3>
+            </div>
+            <div className="cart-items">
+              {cart.cartItems?.map((cartItem) => (
+                <div className="cart-item" key={cartItem.id}>
+                  <div className="cart-product">
+                    <img src={cartItem.image} alt={cartItem.title} />
+                    <div>
+                      <h3>{cartItem.title}</h3>
+                      <p>{cartItem.description}</p>
+                      <button onClick={() => handleRemoveFromCart(cartItem)}>
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                  <div className="cart product-price">${cartItem.price}</div>
+                  <div className="cart-product-quantity">
+                    <button onClick={() => handleDecreasedCart(cartItem)}>
+                      -
+                    </button>
+                    <div className="count">{cartItem.cartQuantity}</div>
+                    <button onClick={() => handleIncreasedCart(cartItem)}>
+                      +
                     </button>
                   </div>
+                  <div className="cart-product-total-price">
+                    ${cartItem.price * cartItem.cartQuantity}
+                  </div>
                 </div>
-                <div className="cart product-price">${cartItem.price}</div>
-                <div className="cart-product-quantity">
-                  <button onClick={() => handleDecreasedCart(cartItem)}>
-                    -
-                  </button>
-                  <div className="count">{cartItem.cartQuantity}</div>
-                  <button onClick={() => handleIncreasedCart(cartItem)}>
-                    +
-                  </button>
-                </div>
-                <div className="cart-product-total-price">
-                  ${cartItem.price * cartItem.cartQuantity}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="cart-summary">
-            <button className="clear-cart" onClick={() => handleClearCart()}>
-              Clear Cart
-            </button>
-            <div className="cart-checkout">
-              <div className="subTotal">
-                <span>Subtotal</span>
-                <span className="amount">${cart.cartTotalAmount}</span>
-                <p>Free shipping</p>
-                <button className="">Checkout</button>
-                <div className="continue-shopping">
-                  <Link to="/">
-                    <HiOutlineArrowSmLeft className="arrow" />
-                    <span>Continue Shopping</span>
-                  </Link>
+              ))}
+            </div>
+            <div className="cart-summary">
+              <button className="clear-cart" onClick={() => handleClearCart()}>
+                Clear Cart
+              </button>
+              <div className="cart-checkout">
+                <div className="subTotal">
+                  <span>Subtotal</span>
+                  <span className="amount">${cart.cartTotalAmount}</span>
+                  <p>Free shipping</p>
+                  <button className="">Checkout</button>
+                  <div className="continue-shopping">
+                    <Link to="/">
+                      <HiOutlineArrowSmLeft className="arrow" />
+                      <span>Continue Shopping</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

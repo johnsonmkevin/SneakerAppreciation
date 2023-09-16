@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HelmetProvider } from "react-helmet-async";
 
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
@@ -30,13 +31,15 @@ store.dispatch(getTotals());
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <Layout>
-          <ToastContainer />
-          <App />
-        </Layout>
-      </BrowserRouter>
-    </Provider>
+    <HelmetProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Layout>
+            <ToastContainer />
+            <App />
+          </Layout>
+        </BrowserRouter>
+      </Provider>
+    </HelmetProvider>
   </React.StrictMode>
 );
