@@ -9,7 +9,7 @@ function Video() {
       <header className="home-titleContainer">
         <h1 className="header">Hoop Dream</h1>
       </header>
-      <section className="video-container">
+      <section>
         <video src={video} /*autoPlay muted loop*/ />
       </section>
       <ModelSlider />

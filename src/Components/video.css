@@ -4,15 +4,12 @@
   font-size: 72px;
 }
 
-.home-titleContainer {
-  margin-bottom: 50px;
-}
-
 /* Make the video container full width of the viewport */
 .video-container {
   width: 100%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 /* Style the video to cover the container */
