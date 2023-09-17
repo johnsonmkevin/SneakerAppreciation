@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer-container">
       <div className="col">
-        <a href="#">FIND A STORE</a>
+        <a href="#">STORE LOCATION</a>
         <p>STUDENT DISCOUNT</p>
         <p>PROMO CODES</p>
       </div>
