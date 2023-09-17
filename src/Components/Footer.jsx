@@ -13,8 +13,8 @@ function Footer() {
         <p>Contact Us</p>
       </div>
       <div className="col">
-        <h5>GET HELP</h5>
-        <p>Contact Us</p>
+        <h5>MEMBERSHIP</h5>
+        <p>Email us</p>
       </div>
     </footer>
   );

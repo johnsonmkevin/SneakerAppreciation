@@ -17,7 +17,6 @@ function Kids() {
     dispatch(addToCart(product));
     navigate("/cart");
   };
-
   return (
     <div>
       <Helmet>
@@ -25,31 +24,37 @@ function Kids() {
         <meta name="description" content="Shop kids basketball sneakers" />
         <link rel="canonical" href="/kids" />
       </Helmet>
-      <div className="sneaker-Container">
+      <div className="centered-container">
         {isLoading ? (
           <div className="spinner"></div>
         ) : error ? (
           <p>Oh no, an error has occurred...</p>
         ) : (
           <>
-            <h2>New Arrivals</h2>
-            <div className="products">
-              {kidsData.map((product) => (
-                <div key={product.id} className="product">
-                  <h3>{product.title}</h3>
-                  <img src={product.image} alt={product.title} />
-                  <div className="details">
-                    <span>{product.description}</span>
-                    <span className="price">${product.price}</span>
+            <div className="sneaker-Container">
+              <h2>New Arrivals</h2>
+              <div className="products">
+                {kidsData.map((product) => (
+                  <div key={product.id} className="product">
+                    <h3>{product.title}</h3>
+                    <img src={product.image} alt={product.title} />
+                    <div className="details">
+                      <div className="product-Description">
+                        <span>{product.description}</span>
+                      </div>
+                      <div className="price-Price">
+                        <span className="price">${product.price}</span>
+                      </div>
+                    </div>
+                    <button
+                      className="btn"
+                      onClick={() => handleAddtoCart(product)}
+                    >
+                      Add To Cart
+                    </button>
                   </div>
-                  <button
-                    className="btn"
-                    onClick={() => handleAddtoCart(product)}
-                  >
-                    Add To Cart
-                  </button>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </>
         )}
