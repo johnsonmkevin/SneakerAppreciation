@@ -19,7 +19,7 @@ const cartSlice = createSlice({
       );
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
-        toast.info(`increased ${state.cartItems[itemIndex].title} quantity`, {
+        toast.info(`increased ${action.payload.title} quantity`, {
           position: "bottom-right",
         });
       } else {

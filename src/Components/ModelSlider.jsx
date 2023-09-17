@@ -18,7 +18,7 @@ export default function Modelslideshow() {
   };
   console.log(imageData);
   return (
-    <section className="mySwiper-container">
+    <section>
       <Swiper
         slidesPerView={isSmall ? 1 : isMedium ? 2 : isLarge ? 3 : 4}
         spaceBetween={isSmall ? 0 : isMedium ? 10 : isLarge ? 20 : 30}

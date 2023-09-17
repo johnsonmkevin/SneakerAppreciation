@@ -7,10 +7,12 @@ function Video() {
   return (
     <>
       <header className="home-titleContainer">
-        <h1 className="header">Hoop Dream</h1>
+        <h1 className="header">Sneaker Head</h1>
       </header>
-      <section className="video-container">
-        <video src={video} /*autoPlay muted loop*/ />
+      <section className="video-section">
+        <div className="video-container">
+          <video src={video} autoPlay muted loop />
+        </div>
       </section>
       <ModelSlider />
     </>
